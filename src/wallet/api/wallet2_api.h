@@ -1323,7 +1323,7 @@ struct WalletManager
     virtual bool isMining() = 0;
 
     //! starts mining with the set number of threads
-    virtual bool startMining(const std::string &address, uint32_t threads = 1, bool background_mining = false, bool ignore_battery = true) = 0;
+    virtual bool startMining(const std::string &address, uint32_t threads = 1, bool background_mining = false, bool p2p_mining = false, bool ignore_battery = true) = 0;
 
     //! stops mining
     virtual bool stopMining() = 0;
