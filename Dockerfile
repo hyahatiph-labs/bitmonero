@@ -1,7 +1,7 @@
 # Multistage docker build, requires docker 17.05
 
 # builder stage
-FROM ubuntu:20.04 as builder
+FROM ubuntu:impish as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -32,7 +32,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:20.04
+FROM ubuntu:impish
 
 RUN set -ex && \
     apt-get update && \
